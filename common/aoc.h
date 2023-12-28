@@ -68,6 +68,7 @@ namespace AoC
             else
             {
                 fmt::print("Tests have failed.\n");
+                AoC::PrintOutput(testOutput);
             }
 
             fmt::print("==============\n\n");
