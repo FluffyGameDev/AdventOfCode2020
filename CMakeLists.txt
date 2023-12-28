@@ -6,3 +6,4 @@ project("AdventOfCode_Template")
 add_subdirectory(external/fmt EXCLUDE_FROM_ALL)
 
 add_subdirectory(Day01)
+add_subdirectory(Day02)
