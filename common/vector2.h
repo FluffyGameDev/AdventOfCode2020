@@ -4,23 +4,24 @@
 
 namespace AoC
 {
+    template <typename T>
     struct Vector2
     {
-        s32 x;
-        s32 y;
+        T x;
+        T y;
 
-        static s32 DotProduct(const Vector2& v1, const Vector2& v2)
+        static T DotProduct(const Vector2& v1, const Vector2& v2)
         {
             return v1.x * v2.x + v1.y * v2.y;
         }
 
-        static s32 SquareDistance(const Vector2& v1, const Vector2& v2)
+        static T SquareDistance(const Vector2& v1, const Vector2& v2)
         {
             Vector2 diff{ v1.x - v2.x, v1.y - v2.y };
             return DotProduct(diff, diff);
         }
 
-        static s32 ManhattanDistance(const Vector2& v1, const Vector2& v2)
+        static T ManhattanDistance(const Vector2& v1, const Vector2& v2)
         {
             Vector2 diff{ v1 - v2 };
             return std::abs(diff.x) + std::abs(diff.y);
@@ -56,4 +57,9 @@ namespace AoC
             return { lhs.x - rhs.x, lhs.y - rhs.y };
         }
     };
+
+    using Vector2S = Vector2<s32>;
+    using Vector2U = Vector2<u32>;
+    using Vector2SLL = Vector2<s64>;
+    using Vector2ULL = Vector2<u64>;
 }
