@@ -56,6 +56,20 @@ namespace AoC
         {
             return { lhs.x - rhs.x, lhs.y - rhs.y };
         }
+
+        Vector2& operator+=(const Vector2& rhs)
+        {
+            x += rhs.x;
+            y += rhs.y;
+            return *this;
+        }
+
+        Vector2& operator-=(const Vector2& rhs)
+        {
+            x -= rhs.x;
+            y -= rhs.y;
+            return *this;
+        }
     };
 
     using Vector2S = Vector2<s32>;
